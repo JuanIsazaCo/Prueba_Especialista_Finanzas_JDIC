@@ -1,0 +1,9 @@
+Métricas de evaluación del modelo:
+              precision    recall  f1-score   support
+
+       Alpha       0.82      0.89      0.85      1036
+       Betha       0.59      0.46      0.52       373
+
+    accuracy                           0.77      1409
+   macro avg       0.71      0.67      0.68      1409
+weighted avg       0.76      0.77      0.76      1409
