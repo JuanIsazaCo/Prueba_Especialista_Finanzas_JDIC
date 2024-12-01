@@ -1,0 +1,26 @@
+Ejecutar la API
+Para ejecutar la API, usa Uvicorn como servidor. En la raíz del proyecto, ejecuta:
+
+copy
+uvicorn app.main:app --reload
+Esto iniciará la API en http://127.0.0.1:8000.
+
+Endpoint para Predicción
+POST /predict/
+Este endpoint acepta una solicitud JSON para predecir la demanda. El JSON debe tener la siguiente estructura:
+
+copy
+{
+    "SeniorCity": 0,
+    "Partner": "Yes",
+    "Dependents": "No",
+    "Service1": "No",
+    "Service2": "Yes",
+    "Security": "Yes",
+    "OnlineBackup": "No",
+    "DeviceProtection": "Yes",
+    "TechSupport": "No",
+    "Contract": "One year",
+    "PaperlessBilling": "Yes",
+    "PaymentMethod": "Electronic check",
+    "Charges": 56.95
