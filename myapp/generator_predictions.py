@@ -1,3 +1,5 @@
+# import sys
+# sys.path.append(r'C:\Users\jisaza53\Especialista_Finanzas_JDIC\myapp')
 
 #Este archivo manejará la lógica para predecir utilizando el modelo cargado.
 import pandas as pd

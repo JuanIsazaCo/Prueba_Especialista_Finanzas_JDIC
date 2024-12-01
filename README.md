@@ -11,7 +11,7 @@ pip install -r requirements.txt
 
 ## Correr API
 
-1. Ejecuta en la terminal el siguiente codigo que utiliza Uvicorn como servidor.
+1. Ejecuta en la terminal el siguiente codigo que utiliza Uvicorn como servidor con el siguiente comando:
 py -m uvicorn myapp.main:app --reload
 
-2. 
+2. ingresar a http://127.0.0.1:8000/docs#/ para testar el proyecto
