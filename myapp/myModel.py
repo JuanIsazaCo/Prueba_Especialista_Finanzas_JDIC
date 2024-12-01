@@ -3,5 +3,9 @@ import joblib
 
 # Función para cargar el modelo previamente entrenado
 def load_model():
-    model = joblib.load('../modelo_entrenado.pkl')  # Ruta del archivo del modelo
+    try:
+        model = joblib.load(r'C:\Users\jisaza53\Especialista_Finanzas_JDIC\modelo_entrenado.pkl')
+    except Exception as e:
+        print(f"Error al cargar el modelo: {e}")
+        raise
     return model

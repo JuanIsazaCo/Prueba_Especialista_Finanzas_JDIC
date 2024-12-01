@@ -1,9 +1,9 @@
-import sys
-sys.path.append(r'C:\Users\jisaza53\Especialista_Finanzas_JDIC\myapp')
-#Este archivo será el punto de entrada para ejecutar la API. Configuraremos las rutas de la API usando FastAPI.
+# import sys
+# sys.path.append(r'C:\Users\jisaza53\Especialista_Finanzas_JDIC\myapp')
+# Este archivo será el punto de entrada para ejecutar la API. Configuraremos las rutas de la API usando FastAPI.
 from fastapi import FastAPI
 from pydantic import BaseModel
-import generator_predictions
+from myapp.generator_predictions import predict_demand  # Asume que esta función ya está definida
 
 # Definir la estructura del JSON de entrada utilizando Pydantic
 class DemandRequest(BaseModel):
@@ -20,12 +20,12 @@ class DemandRequest(BaseModel):
     PaperlessBilling: str
     PaymentMethod: str
     Charges: float
-
+    Demand: float
 # Crear la instancia de la app FastAPI
 app = FastAPI()
 
-@app.post("/generator_predictions.py/")
-async def predict(request: DemandRequest):
+@app.post("/generator_predictions/")
+async def generate_predictions(request: DemandRequest):
     # Convertir el request en un diccionario
     data = request.dict()
 
@@ -35,4 +35,4 @@ async def predict(request: DemandRequest):
     # Devolver la predicción como respuesta
     return prediction
 
-print('El codigo se ha corrido con exito')
+print('El código se ha corrido con éxito')

@@ -8,3 +8,10 @@ Instalar las dependencias con `pip`:
 
 ```bash
 pip install -r requirements.txt
+
+## Correr API
+
+1. Ejecuta en la terminal el siguiente codigo que utiliza Uvicorn como servidor.
+py -m uvicorn myapp.main:app --reload
+
+2. 

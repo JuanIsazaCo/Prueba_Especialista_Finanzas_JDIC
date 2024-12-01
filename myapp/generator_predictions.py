@@ -1,9 +1,7 @@
-import sys
-sys.path.append(r'C:\Users\jisaza53\Especialista_Finanzas_JDIC\myapp')
 
 #Este archivo manejará la lógica para predecir utilizando el modelo cargado.
 import pandas as pd
-import myModel
+from myapp.myModel import load_model
 
 # Función para predecir la demanda
 def predict_demand(data: dict) -> dict:
@@ -18,3 +16,4 @@ def predict_demand(data: dict) -> dict:
 
     # Devolver el resultado como un diccionario
     return {"Predicted_Demand": prediction[0]}
+print('Se ha corrido con exito')
