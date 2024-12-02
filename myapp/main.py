@@ -3,7 +3,7 @@
 # Este archivo será el punto de entrada para ejecutar la API. Configuraremos las rutas de la API usando FastAPI.
 from fastapi import FastAPI
 from pydantic import BaseModel
-from myapp.generator_predictions import predict_demand  # Asume que esta función ya está definida
+from myapp.generator_predictions import predict_demand
 
 # Definir la estructura del JSON de entrada utilizando Pydantic
 class DemandRequest(BaseModel):
