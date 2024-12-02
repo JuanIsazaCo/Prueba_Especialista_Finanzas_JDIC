@@ -1,5 +1,0 @@
-Se realizan las siguientes pruebas:
-
-6388-TABGU,0,No,Yes,Yes,No,Yes,Yes,No,No,One year,No,Bank transfer (automatic),56.15,3487.95,Alpha
-7892-POOKP,0,Yes,No,Yes,Yes,No,No,Yes,Yes,Month-to-month,Yes,Electronic check,104.8,3046.05,Betha
-8168-UQWWF,0,No,No,Yes,Yes,No,No,Yes,No,Month-to-month,Yes,Bank transfer (automatic),97.85,1105.4,BethaS
