@@ -13,12 +13,19 @@ def predict_demand(data: dict) -> dict:
     # Cargar el modelo
     model = load_model()
 
-    # Acceder al modelo de demanda
+    # Acceder a los modelos de clase y demanda
+    class_model = model['class_model']
     demand_model = model['demand_model']
 
-    # Realizar la predicción de la demanda
-    prediction = demand_model.predict(df)
+    # Realizar la predicción de la clase
+    class_prediction = class_model.predict(df)
 
-    # Devolver el resultado como un diccionario
-    return {"Predicted_Demand": prediction[0]}
+    # Realizar la predicción de la demanda
+    demand_prediction = demand_model.predict(df)
+
+    # Devolver ambos resultados como un diccionario
+    return {
+        "Predicted_Class": class_prediction[0],
+        "Predicted_Demand": demand_prediction[0]
+    }
 print('Se ha corrido con exito')
