@@ -5,7 +5,7 @@
 import pandas as pd
 from myapp.myModel import load_model
 
-# Función para predecir la demanda
+# En generator_predictions.py
 def predict_demand(data: dict) -> dict:
     # Convertir los datos de entrada (dict) en un DataFrame
     df = pd.DataFrame([data])
@@ -13,8 +13,11 @@ def predict_demand(data: dict) -> dict:
     # Cargar el modelo
     model = load_model()
 
-    # Realizar la predicción
-    prediction = model.predict(df)
+    # Acceder al modelo de demanda
+    demand_model = model['demand_model']
+
+    # Realizar la predicción de la demanda
+    prediction = demand_model.predict(df)
 
     # Devolver el resultado como un diccionario
     return {"Predicted_Demand": prediction[0]}

@@ -20,7 +20,7 @@ class DemandRequest(BaseModel):
     PaperlessBilling: str
     PaymentMethod: str
     Charges: float
-    Demand: float
+    
 # Crear la instancia de la app FastAPI
 app = FastAPI()
 
