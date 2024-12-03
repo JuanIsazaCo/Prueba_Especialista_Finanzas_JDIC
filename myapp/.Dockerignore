@@ -1,0 +1,4 @@
+Dockerfile
+../0.Analisis exploratorio.ipynb
+../Debugging.py
+.Dockerignore

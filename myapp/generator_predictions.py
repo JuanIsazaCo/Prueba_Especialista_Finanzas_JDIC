@@ -1,9 +1,15 @@
-# import sys
-# sys.path.append(r'C:\Users\jisaza53\Especialista_Finanzas_JDIC\myapp')
+import sys
+import os
+
+# Agregar el directorio 'myapp' al sys.path de forma relativa
+current_dir = os.path.dirname(__file__)  # Obtiene el directorio del script actual
+myapp_dir = os.path.join(current_dir)  # Crea la ruta relativa a 'myapp'
+
+sys.path.append(myapp_dir)
 
 #Este archivo manejará la lógica para predecir utilizando el modelo cargado.
 import pandas as pd
-from myapp.myModel import load_model
+from myModel import load_model
 
 # En generator_predictions.py
 def predict_demand(data: dict) -> dict:

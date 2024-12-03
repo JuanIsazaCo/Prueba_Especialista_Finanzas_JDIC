@@ -1,9 +1,18 @@
-# import sys
-# sys.path.append(r'C:\Users\jisaza53\Especialista_Finanzas_JDIC\myapp')
+import sys
+import os
+# Agregar el directorio 'myapp' al sys.path de forma relativa
+current_dir = os.path.dirname(__file__)  # Obtiene el directorio del script actual
+myapp_dir = os.path.join(current_dir)  # Crea la ruta relativa a 'myapp'
+
+sys.path.append(myapp_dir)
 # Este archivo será el punto de entrada para ejecutar la API. Configuraremos las rutas de la API usando FastAPI.
 from fastapi import FastAPI
 from pydantic import BaseModel
+<<<<<<< HEAD
 from myapp.generator_predictions import predict_demand
+=======
+from generator_predictions import predict_demand  # Asume que esta función ya está definida
+>>>>>>> pruebas
 
 # Definir la estructura del JSON de entrada utilizando Pydantic
 class DemandRequest(BaseModel):
