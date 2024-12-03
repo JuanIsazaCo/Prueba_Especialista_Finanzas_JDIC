@@ -1,4 +1,5 @@
 py -m uvicorn myapp.main:app --reload
 
 #Correr desde el docker
+docker run -d -p 8000:8000 prueba_especialista
 http://localhost:8000/docs#/
